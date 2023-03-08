@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.image-container {
+  position: relative;
+}
+
+img {
+  width: 99.2vw;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+.target-box {
+  position: absolute;
+  border: solid 1px red;
+  z-index: 1;
+}
