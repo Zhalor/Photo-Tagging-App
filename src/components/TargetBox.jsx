@@ -2,31 +2,33 @@ import { db, collection, doc, getDoc } from '../firebase.js';
 
 function TargetSelect(props) {
 
-  async function getCharacterLocation(e) {
+  async function getCharacterLocation(character) {
+    props.setIsFeebackVisable(true);
     props.setStyle({display: 'none'});
-    const snapshot = await getDoc(doc(db, 'Level 1', 'Waldo'));
+    const snapshot = await getDoc(doc(db, 'Level 1', character));
     const charCoords = snapshot.data();
-    console.log(props.xLocation, props.yLocation);
+
     if(props.xLocation > charCoords.xStart && props.xLocation < charCoords.xEnd 
       && props.yLocation > charCoords.yStart && props.yLocation < charCoords.yEnd) {
         console.log('Winner Winner Chicken Dinner!');
+        const arr = props.characters.filter(char => char !== character);
+        props.setCharacters(arr);
     }
+    setTimeout(() => {
+      props.setIsFeebackVisable(false);
+    }, 2000);
   }
 
   return (
     <div className="target-select" style={props.style}>
-      <div>
-        <img src="" alt="" />
-        <span onClick={getCharacterLocation}>Waldo</span>
-      </div>
-      <div>
-        <img src="" alt="" />
-        <span>Wizard</span>
-      </div>
-      <div>
-        <img src="" alt="" />
-        <span>Wally</span>
-      </div>
+      {props.characters.map(character => {
+        return(
+          <div key={character}>
+            <img src="" alt="" />
+            <span onClick={() => getCharacterLocation(character)}>{character}</span>
+          </div>
+        );
+      })}
     </div>
   )
   

@@ -1,39 +1,33 @@
 import './styles.css';
-import waldoBeach from './images/Waldo_Beach.jpg';
-import { TargetSelect } from './components/TargetBox';
 import { Header } from './components/Header';
-import { useState } from 'react';
+import { Level1 } from './components/Level1';
+import { LevelSelect } from './components/LevelSelect';
+import { useState } from 'react'
+import { SelectFeedback } from './components/SelectFeedback';
 
 function App() {
-  const [style, setStyle] = useState({left: '0px', top: '0px'});
-  const [characters, setCharacters] = useState(['Waldo']);
-  const [xLocation, setXLocation] = useState(0);
-  const [yLocation, setYLocation] = useState(0);
+  const [isFeebackVisable, setIsFeebackVisable] = useState(false);
+  const [level, setlevel] = useState('Level Select');
+  const [characters, setCharacters] = useState([]);
 
-
-  function renderTargetBox(e) {
-    const x = e.nativeEvent.offsetX;
-    const y = e.nativeEvent.offsetY;
-    setXLocation(x);
-    setYLocation(y);
-    console.log(`X: ${x} - Y: ${y}`);
-    const boxDisplay = document.querySelector('.target-select').style.display;
-    if(boxDisplay === '' || boxDisplay === 'none') {
-      setStyle({left: `${x + 10}px`, top: `${y + 10}px`, display: 'flex'});
-    } else {
-      setStyle({display: 'none'});
+  function handleLevelSelect() {
+    switch(level) {
+      case 'Level Select':
+        return <LevelSelect setlevel={setlevel} setCharacters={setCharacters} />;
+        break;
+      case 'Level 1':
+        return <Level1 setIsFeebackVisable={setIsFeebackVisable} characters={characters} setCharacters={setCharacters} />;
+        break;
     }
   }
 
   return (
-    <div>
-      <Header characters={characters}/>
-      <div className='image-container'>
-        <img src={waldoBeach} alt="An image of Where's Waldo on the beach" onClick={renderTargetBox} />
-        <TargetSelect style={style} setStyle={setStyle} xLocation={xLocation} yLocation={yLocation}/>
-      </div>
+    <div className='container'>
+      {isFeebackVisable && <SelectFeedback />}
+      <Header characters={characters} />
+      {handleLevelSelect()}
     </div>
   )
 }
 
-export default App
+export { App }
