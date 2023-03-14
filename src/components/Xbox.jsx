@@ -1,8 +1,8 @@
-import waldoBeach from '../images/Waldo_Beach.jpg';
+import { levelImages } from '../images/characterImages.js';
 import { TargetSelect } from './TargetBox';
 import { useState } from 'react';
 
-function Level1(props) {
+function Xbox(props) {
   const [style, setStyle] = useState({left: '0px', top: '0px'});
   const [xLocation, setXLocation] = useState(0);
   const [yLocation, setYLocation] = useState(0);
@@ -24,11 +24,11 @@ function Level1(props) {
 
   return (
     <div className='image-container'>
-      <img src={waldoBeach} alt="An image of Where's Waldo on the beach" onClick={renderTargetBox} />
+      <img src={levelImages[props.level]} onClick={renderTargetBox} />
       <TargetSelect style={style} setStyle={setStyle} xLocation={xLocation} yLocation={yLocation}
       characters={props.characters} setCharacters={props.setCharacters} setIsFeebackVisable= {props.setIsFeebackVisable}/>
     </div>
   )
 }
 
-export { Level1 }
+export { Xbox }

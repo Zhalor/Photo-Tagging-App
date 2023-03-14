@@ -1,4 +1,5 @@
 import { db, collection, doc, getDoc } from '../firebase.js';
+import { characterImages } from '../images/characterImages.js';
 
 function TargetSelect(props) {
 
@@ -24,7 +25,7 @@ function TargetSelect(props) {
       {props.characters.map(character => {
         return(
           <div key={character}>
-            <img src="" alt="" />
+            <img src={characterImages[character]} alt="" />
             <span onClick={() => getCharacterLocation(character)}>{character}</span>
           </div>
         );
