@@ -19,7 +19,7 @@ function LevelSelect(props) {
 
     <div className="level-select-btn" onClick={() => {
       props.setLevel('N64');
-      props.setCharacters(['BobBomb', 'Brian', 'LInk'])
+      props.setCharacters(['BobOmb', 'Brian', 'Link'])
       }}><img src={N64} /></div>
 
     <div className="level-select-btn" onClick={() => {
@@ -44,7 +44,7 @@ function LevelSelect(props) {
 
     <div className="level-select-btn" onClick={() => {
       props.setLevel('PS2');
-      props.setCharacters(['Kratos', 'Ratchet', 'Jack&Daxter'])
+      props.setCharacters(['Kratos', 'Ratchet', 'Jack'])
       }}><img src={PS2} /></div>
 
     <div className="level-select-btn" onClick={() => {

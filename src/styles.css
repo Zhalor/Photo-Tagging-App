@@ -12,9 +12,17 @@
 
 .select-feeback {
   position: fixed;
-  top: 50px;
+  top: 150px;
   left: 50%;
   z-index: 1;
+  color: white;
+  font-size: 700;
+  background-color: rgb(255, 22, 22);
+  width: 140px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 15px;
+  font-weight: 700;
 }
 
 .header {
@@ -118,7 +126,7 @@
   gap: 13px;
   border: solid 1px #1f1f1f;
   z-index: 1;
-  width: 150px;
+  width: 180px;
   padding: 15px;
   background-color: #ebebeb;
   border-radius: 8px;
@@ -134,8 +142,9 @@
 }
 
 .target-select img {
-  height: 32px;
-  width: 32px;
+  height: 48px;
+  width: 48px;
   margin-right: 15px;
+  margin-left: 5px;
 }
 

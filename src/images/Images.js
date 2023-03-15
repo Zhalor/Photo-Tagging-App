@@ -7,7 +7,7 @@ import Link from './N64/Link.png';
 import Alucard from './PS1/Alucard.png';
 import Ape from './PS1/Ape.png';
 import Cloud from './PS1/Cloud.png';
-import JackDaxter from './PS2/Jack&Daxter.png';
+import Jack from './PS2/Jack.png';
 import Kratos from './PS2/Kratos.png';
 import Ratchet from './PS2/Ratchet.png';
 import Cole from './PS3/Cole.png';
@@ -21,7 +21,7 @@ import Raz from './Xbox/Raz.png';
 import Sam from './Xbox/Sam.png';
 import Garrus from './Xbox360/Garrus.png';
 import Isaac from './Xbox360/Isaac.png';
-import MasterCheif from './Xbox360/MasterChief.png';
+import MasterChief from './Xbox360/MasterChief.png';
 
 import Xbox from '../images/Xbox/Xbox.jpg';
 import Xbox360 from '../images/Xbox360/Xbox360.jpg';
@@ -42,7 +42,7 @@ const characterImages = {
   Alucard: Alucard,
   Ape: Ape,
   Cloud: Cloud,
-  JackDaxter: JackDaxter,
+  Jack: Jack,
   Kratos: Kratos,
   Ratchet: Ratchet,
   Cole: Cole,
@@ -56,7 +56,7 @@ const characterImages = {
   Sam: Sam,
   Garrus: Garrus,
   Isaac: Isaac,
-  MasterCheif: MasterCheif,
+  MasterChief: MasterChief,
 }
 
 const levelImages = {
