@@ -15,43 +15,52 @@ function LevelSelect(props) {
     <div className="level-select-btn" onClick={() => {
       props.setLevel('SNES');
       props.setCharacters(['Mario', 'MegamanX', 'Samus'])
-      }}><img src={SNES} /></div>
+      }}><img src={SNES} />
+    </div>
 
     <div className="level-select-btn" onClick={() => {
       props.setLevel('N64');
       props.setCharacters(['BobOmb', 'Brian', 'Link'])
-      }}><img src={N64} /></div>
+      }}><img src={N64} />
+    </div>
 
     <div className="level-select-btn" onClick={() => {
       props.setLevel('Gamecube');
       props.setCharacters(['AiAi', 'Billy', 'Sheik'])
-      }}><img src={Gamecube} /></div>
+      }}><img src={Gamecube} />
+    </div>
 
     <div className="level-select-btn" onClick={() => {
       props.setLevel('Xbox');
       props.setCharacters(['Abe', 'Raz', 'Sam'])
-      }}><img src={Xbox} /></div>
+      }}><img src={Xbox} />
+    </div>
 
     <div className="level-select-btn" onClick={() => {
       props.setLevel('Xbox360');
       props.setCharacters(['Garrus', 'Isaac', 'MasterChief'])
-      }}><img src={Xbox360} /></div>
+      }}><img src={Xbox360} />
+    </div>
 
     <div className="level-select-btn" onClick={() => {
       props.setLevel('PS1');
       props.setCharacters(['Alucard', 'Ape', 'Cloud'])
-      }}><img src={PS1} /></div>
+      }}><img src={PS1} />
+    </div>
 
     <div className="level-select-btn" onClick={() => {
       props.setLevel('PS2');
       props.setCharacters(['Kratos', 'Ratchet', 'Jack'])
-      }}><img src={PS2} /></div>
+      }}><img src={PS2} />
+    </div>
 
     <div className="level-select-btn" onClick={() => {
       props.setLevel('PS3');
       props.setCharacters(['Cole', 'Sackboy', 'Traveler'])
-      }}><img src={PS3} /></div>
-   </div>
+      }}><img src={PS3} />
+    </div>
+   
+  </div>
   )
 }
 

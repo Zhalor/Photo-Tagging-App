@@ -1,11 +1,13 @@
+import { Link } from 'react-router-dom';
+
 function Header(props) {
   return (
     <div className="header">
-      {props.level === 'Level Select' ? 
+      {props.level === 'Level Select' || props.level === null ? 
       <div>
-        <span>High Scores</span>
-        <h1>Select Level</h1>
-        <span>About</span>
+        <Link to='/highscores'>High Scores</Link>
+        {props.level === null ? <Link to='/' className='home'>Home</Link> : <h1>Select Level</h1>}
+        <Link to='/about'>About</Link>
       </div> : 
       <div>
         <button className="home-btn" onClick={() => props.setLevel('Level Select')}>Return Home</button>

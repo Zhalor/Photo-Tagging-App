@@ -4,6 +4,7 @@ import { Level } from './components/Level';
 import { LevelSelect } from './components/LevelSelect';
 import { useState } from 'react'
 import { SelectFeedback } from './components/SelectFeedback';
+import { GameOverModal } from './components/GameOverModal.jsx';
 
 function App() {
   const [isFeebackVisable, setIsFeebackVisable] = useState(false);
@@ -19,10 +20,28 @@ function App() {
   return (
     <div className='container'>
       {isFeebackVisable && <SelectFeedback found={found} />}
-      <Header characters={characters} level={level} setLevel={setLevel} />
+        <Header 
+          characters={characters}
+          level={level}
+          setLevel={setLevel} 
+        />
       {level === 'Level Select' ? 
-      <LevelSelect setLevel={setLevel} setCharacters={setCharacters} /> :
-      <Level handleFeedback={handleFeedback} characters={characters} setCharacters={setCharacters} level={level} />}
+        <LevelSelect
+          setLevel={setLevel}
+          setCharacters={setCharacters}
+        /> :
+        <Level 
+          handleFeedback={handleFeedback}
+          characters={characters}
+          setCharacters={setCharacters}
+          level={level} />
+      }
+      {characters.length === 0 && level !== 'Level Select' ?
+        <GameOverModal
+          level={level}
+          setLevel={setLevel} /> :
+          null
+      }
     </div>
   )
 }

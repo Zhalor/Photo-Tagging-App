@@ -13,7 +13,6 @@ function Level(props) {
     const y = e.nativeEvent.offsetY;
     setXLocation(x);
     setYLocation(y);
-    console.log(`X: ${x} - Y: ${y}`);
     const targetSelectDisplay = document.querySelector('.target-select').style.display;
     if(targetSelectDisplay === '' || targetSelectDisplay === 'none') {
       setStyle({left: `${x + 10}px`, top: `${y + 10}px`, display: 'flex'});
