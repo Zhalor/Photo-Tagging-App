@@ -1,4 +1,4 @@
-import { db, collection, doc, getDoc } from '../firebase.js';
+import { db, doc, getDoc } from '../firebase.js';
 import { characterImages } from '../images/Images.js';
 
 function TargetSelect(props) {

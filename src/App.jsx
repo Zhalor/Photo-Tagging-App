@@ -11,6 +11,7 @@ function App() {
   const [found, setFound] = useState(false);
   const [level, setLevel] = useState('Level Select');
   const [characters, setCharacters] = useState([]);
+  const [timer, setTimer] = useState(0);
 
   function handleFeedback(feedBackBool, foundBool) {
     setIsFeebackVisable(feedBackBool);
@@ -34,12 +35,15 @@ function App() {
           handleFeedback={handleFeedback}
           characters={characters}
           setCharacters={setCharacters}
-          level={level} />
+          level={level} 
+          setTimer={setTimer}
+        />
       }
       {characters.length === 0 && level !== 'Level Select' ?
         <GameOverModal
           level={level}
-          setLevel={setLevel} /> :
+          setLevel={setLevel} 
+          timer={timer} /> :
           null
       }
     </div>

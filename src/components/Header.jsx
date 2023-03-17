@@ -6,7 +6,7 @@ function Header(props) {
       {props.level === 'Level Select' || props.level === null ? 
       <div>
         <Link to='/highscores'>High Scores</Link>
-        {props.level === null ? <Link to='/' className='home'>Home</Link> : <h1>Select Level</h1>}
+        <Link to='/' className='home'>Level Select</Link>
         <Link to='/about'>About</Link>
       </div> : 
       <div>

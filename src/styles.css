@@ -8,6 +8,7 @@
 .container {
   position: relative;
   background-color: #2B2B2B;
+  padding-bottom: 50px;
 }
 
 .select-feeback {
@@ -48,6 +49,10 @@
   color: #fd452d;
 }
 
+.header .home:hover {
+  border-bottom: 4px solid #fd452d;
+}
+
 .header a {
   font-size: 1.4rem;
   padding-bottom: 5px;
@@ -57,7 +62,7 @@
   color: #ebebeb;
 }
 
-.header span:hover {
+.header a:hover {
   border-bottom: 2px solid #ebebeb;
 }
 
@@ -162,29 +167,45 @@
 
 .game-over-modal {
   position: sticky;
-  top: 35%;
+  top: 30%;
   left: 40%;
   color: #ebebeb;
   background-color: #2B2B2B;
-  height: 300px;
+  height: 350px;
   width: 400px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 80px;
+  gap: 20px;
+  font-size: 1.8rem;
 }
 
 .game-over-modal > div {
   display: flex;
-  gap: 30px;
+  gap: 20px;
+  padding-top: 10px;;
 }
 
 .game-over-modal > span {
-  font-size: 2.2rem;
   font-weight: 700;
   text-align: center;
+}
+
+.game-over-modal > span:last-of-type {
+  font-size: 1.8rem;
+  color: #fd452d;
+}
+
+.game-over-modal input {
+  font-size: 1.5rem;
+  width: 240px;
+  outline: none;
+  border: 1px solid #1f1f1f;
+  border-radius: 8px;
+  padding: 8px;
+  margin-left: 8px;
 }
 
 .game-over-modal button {

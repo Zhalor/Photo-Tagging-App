@@ -1,11 +1,15 @@
 import { levelImages } from '../images/Images.js';
 import { TargetSelect } from './TargetBox';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Level(props) {
   const [style, setStyle] = useState({left: '0px', top: '0px'});
   const [xLocation, setXLocation] = useState(0);
   const [yLocation, setYLocation] = useState(0);
+
+  useEffect(() => {
+    props.setTimer(Date.now());
+  }, []);
 
 
   function renderTargetBox(e) {

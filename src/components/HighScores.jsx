@@ -8,6 +8,7 @@ function HighScores() {
           level={null}
           setLevel={null} 
       />
+      
     </div>
   )
 }
