@@ -21,7 +21,7 @@ function HighScores() {
       <div className="score-container">
         <h2>Top Scores</h2>
         {scores.map(score => {
-            return <Score score={score} />
+            return <Score score={score} key={score.score} />
           })
         }
       </div>

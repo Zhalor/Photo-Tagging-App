@@ -61,6 +61,8 @@
   font-weight: 700;
   text-decoration: none;
   color: #ebebeb;
+  min-width: 135px;
+  text-align: center;
 }
 
 .header a:hover {
@@ -72,7 +74,7 @@
   border-radius: 5px;
   border: solid 1px rgb(253, 69, 45);
   background-color: rgb(253, 69, 45);
-  color: white;
+  color: #ebebeb;
   font-weight: 700;
   font-size: 1.1rem;
   cursor: pointer;
@@ -84,7 +86,7 @@
   border-radius: 50%;
   border: solid 1px #fd452d;
   background-color: #fd452d;
-  color: white;
+  color: #ebebeb;
   font-weight: 700;
   font-size: 1.2rem;
   cursor: pointer;
@@ -212,12 +214,21 @@
 .game-over-modal button {
   padding: 10px;
   border-radius: 5px;
-  border: solid 1px rgb(253, 69, 45);
+  border: solid 1px #fd452d;
   background-color: rgb(253, 69, 45);
-  color: white;
+  color: #ebebeb;
   font-weight: 700;
   font-size: 1.1rem;
   cursor: pointer;
+}
+
+.game-over-modal button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.game-over-modal button:disabled {
+  background-color: #c44b3b;
+  border: #c44b3b;
 }
 
 .score-select-container {
@@ -264,7 +275,43 @@
 }
 
 .score > span {
-  color: white;
+  color: #ebebeb;
   font-size: 1.2rem;
   font-weight: 700;
+}
+
+.contact-container {
+  width: 550px;
+  margin: 150px auto 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.contact-container svg {
+  fill: #ebebeb;
+  width: 96px;
+  height: 96px;
+  transition: all .5s;
+  transition-timing-function: ease-in-out;
+}
+
+.contact-container svg:hover {
+  fill: #fd452d;
+}
+
+.contact-container > span {
+  color: #ebebeb;
+  font-size: 1.6rem;
+}
+
+.contact-container > span:last-of-type {
+  font-size: 1.1rem;
+  margin-top: 100px;
+}
+
+.contact-container a {
+  color: #fd452d;
+  text-decoration: none;
 }
