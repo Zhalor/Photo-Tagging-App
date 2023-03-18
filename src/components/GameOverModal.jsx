@@ -8,6 +8,7 @@ function GameOverModal(props) {
     const uploadBtn = document.getElementById('upload-btn');
     await setDoc(doc(db, `${props.level}Scores`, name), {
       score: time,
+      name: name,
     });
     uploadBtn.disabled = true;
   }
