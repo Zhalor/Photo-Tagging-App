@@ -304,6 +304,7 @@
 .contact-container > span {
   color: #ebebeb;
   font-size: 1.6rem;
+  text-align: center;
 }
 
 .contact-container > span:last-of-type {

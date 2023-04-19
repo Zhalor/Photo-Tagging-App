@@ -6,7 +6,7 @@ import { HighScores } from './components/HighScores';
 
 function RouteSwitch() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/Photo-Tagging-App'>
       <Routes>
         <Route path='/' element={<App />} />
         <Route path='/highscores' element={<HighScores />} />
