@@ -1,9 +1,9 @@
 {
   "name": "photo-tagging-app",
+  "homepage": "https://zhalor.github.io/Photo-Tagging-App/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://zhalor.github.io/Photo-Tagging-App/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
